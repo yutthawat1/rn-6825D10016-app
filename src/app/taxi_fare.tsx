@@ -85,7 +85,6 @@ export default function TaxiFare() {
         <Text style={styles.headerText}>Taxi Fare</Text>
       </View>
       <View style={styles.iconContainer}>
-        {/* <Text style={styles.taxiEmoji}>🚕</Text> */}
         <Image
                 source={require("../../assets/images/taxi-driver.png")}
                 style={styles.taxiImg}
@@ -96,7 +95,7 @@ export default function TaxiFare() {
         <Text style={styles.titleTh}>คำนวณค่าโดยสารแท็กซี่</Text>
 
         <View style={styles.fieldWrap}>
-          <Text style={styles.label}>ระยะทาง (กิโลเมตร) 🗺️</Text>
+          <Text style={styles.label}>ระยะทาง (กิโลเมตร) </Text>
           <TextInput
             style={[styles.input, distError ? styles.inputError : null]}
             placeholder="กรุณากรอกระยะทาง"
@@ -108,7 +107,7 @@ export default function TaxiFare() {
         </View>
 
         <View style={styles.fieldWrap}>
-          <Text style={styles.label}>เวลารถติด (นาที) ⏰</Text>
+          <Text style={styles.label}>เวลารถติด (นาที)</Text>
           <TextInput
             style={[styles.input, trafficError ? styles.inputError : null]}
             placeholder="กรุณากรอกเวลารถติด"
@@ -205,6 +204,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     backgroundColor: '#e0fde0',
     color: '#333',
+    opacity: 0.5,
   },
   inputError: {
     borderColor: '#e53935',
