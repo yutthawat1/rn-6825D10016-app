@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import {
-  View,
+  Image,
+  ScrollView,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  ScrollView,
-  Alert,
+  View
 } from 'react-native';
 
 function calcFare(km: number, trafficMin: number): number {
@@ -85,7 +85,11 @@ export default function TaxiFare() {
         <Text style={styles.headerText}>Taxi Fare</Text>
       </View>
       <View style={styles.iconContainer}>
-        <Text style={styles.taxiEmoji}>🚕</Text>
+        {/* <Text style={styles.taxiEmoji}>🚕</Text> */}
+        <Image
+                source={require("../../assets/images/taxi-driver.png")}
+                style={styles.taxiImg}
+              />
       </View>
 
       <View style={styles.card}>
@@ -135,13 +139,13 @@ export default function TaxiFare() {
   );
 }
 
-const YELLOW = '#F5A623';
+const YELLOW = '#27de27';
 const GRAY = '#888888';
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#e0fde0',
     alignItems: 'center',
   },
   header: {
@@ -159,14 +163,19 @@ const styles = StyleSheet.create({
   iconContainer: {
     paddingVertical: 20,
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#e0fde0',
     width: '100%',
   },
-  taxiEmoji: {
-    fontSize: 80,
+  // taxiEmoji: {
+  //   fontSize: 80,
+  // },
+  taxiImg: {
+    width: 110,
+    height: 110,
+    marginBottom: 16,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#e0fde0',
     width: '100%',
     paddingHorizontal: 20,
     paddingBottom: 28,
@@ -194,7 +203,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 15,
-    backgroundColor: '#fafafa',
+    backgroundColor: '#e0fde0',
     color: '#333',
   },
   inputError: {
@@ -214,7 +223,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   btnCancel: {
-    backgroundColor: GRAY,
+    // backgroundColor: GRAY,
+    backgroundColor: '#fe0000',
     borderRadius: 10,
     paddingVertical: 14,
     alignItems: 'center',
@@ -226,7 +236,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   resultBox: {
-    backgroundColor: '#FFF8E7',
+    backgroundColor: '#e0fde0',
     borderWidth: 1.5,
     borderColor: YELLOW,
     borderRadius: 12,

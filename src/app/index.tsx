@@ -16,14 +16,17 @@ export default function Index() {
   return (
     <View style={styles.container}>
       {/* Taxi Icon */}
-      <Text style={styles.taxiEmoji}>🚕</Text>
+      <Image
+        source={require("../../assets/images/taxi.png")}
+        style={styles.taxiImg}
+      />
 
       {/* Title */}
       <Text style={styles.title}>Taxi Fare Calculator</Text>
       <Text style={styles.subtitle}>คำนวณค่าโดยสารแท็กซี่</Text>
 
       {/* Loading Spinner */}
-      <ActivityIndicator size="small" color="#4A90D9" style={styles.spinner} />
+      <ActivityIndicator size="small" color="#32cd32" style={styles.spinner} />
 
       {/* Profile Section */}
       <View style={styles.profileWrap}>
@@ -42,13 +45,14 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#F5F5FA",
+    backgroundColor: "#e0fde0",
     alignItems: "center",
     justifyContent: "center",
     paddingBottom: 40,
   },
-  taxiEmoji: {
-    fontSize: 110,
+  taxiImg: {
+    width: 110,
+    height: 110,
     marginBottom: 16,
   },
   title: {
